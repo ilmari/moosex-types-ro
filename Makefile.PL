@@ -4,10 +4,11 @@ use warnings;
 use inc::Module::Install 0.92;
 
 name 'MooseX-Types-Ro';
+author "Dagfinn Ilmari Manns\x{a9}ker <ilmari\@ilmari.org>";
 all_from 'lib/MooseX/Types/Ro.pm';
-author 'Dagfinn Ilmari Mannsåker <ilmari@ilmari.org>';
-
-resources repository => 'git://github.com/ilmari/moosex-types-ro.git';
+readme_from 'lib/MooseX/Types/Ro.pm' => 'clean';
+readme_pod_from 'lib/MooseX/Types/Ro.pm';
+githubmeta;
 
 requires 'Internals'     => '1.1';
 requires 'MooseX::Types' => '0';
