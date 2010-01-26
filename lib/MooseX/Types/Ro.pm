@@ -1,8 +1,37 @@
 =head1 NAME
 
-MooseX::Types::Ro - Moose types for read-only containers
+MooseX::Types::Ro - Moose type constraints for read-only containers
 
-=cut    
+=head1 SYNOPSIS
+
+    package Foo;
+
+    use Moose;
+    use MooseX::Types::Ro qw(RoArrayRef RoHashRef);
+
+    has array => ( is => 'ro', isa => RoArrayRef, coerce => 1 );
+    has hash => ( is => 'ro', isa => RoHashRef, coerce => 1 );
+
+    my $foo = Foo->new(array => [1, 2, 3], hash => { foo => 1, bar => 2 });
+
+    # These all throw exceptions now:
+
+    $foo->array->[0] = 42;
+    $foo->array->[3] = 42;
+    push @{$foo->array}, 69;
+
+    $foo->hash->{bar} = 3;
+    delete $foo->hash->{bar};p
+    $foo->hash->{baz} = 4;
+
+=head1 DESCRIPTION
+
+L<MooseX::Types::Ro> provides L<Moose> type constraints for read-only
+array and hash references.  Attempting to modify the values in any way,
+including adding or deleting from the arrays and hashes will throw an
+exception.
+
+=cut
 
 package MooseX::Types::Ro;
 

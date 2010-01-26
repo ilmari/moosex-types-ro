@@ -15,4 +15,7 @@ requires 'MooseX::Types' => '0';
 
 test_requires 'Test::More' => '0.88';
 
+author_requires 'Test::Pod' => '0';
+author_tests 't/author';
+
 WriteAll;
