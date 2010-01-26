@@ -7,7 +7,7 @@ name 'MooseX-Types-Ro';
 all_from 'lib/MooseX/Types/Ro.pm';
 author 'Dagfinn Ilmari Mannsåker <ilmari@ilmari.org>';
 
-resources repository => 'git://github.com/ilmari/MooseX-Types-Ro.git';
+resources repository => 'git://github.com/ilmari/moosex-types-ro.git';
 
 requires 'Internals'     => '1.1';
 requires 'MooseX::Types' => '0';
