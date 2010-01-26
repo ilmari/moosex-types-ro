@@ -1,0 +1,13 @@
+*~
+blib/
+inc/
+*.bak
+*.old
+META.yml
+MANIFEST
+Makefile
+pm_to_blib
+*.tar.gz
+MooseX-Types-Ro-*
+cover_db
+nytprof.out
